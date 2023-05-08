@@ -97,6 +97,21 @@ img{
     margin-inline: 1.5rem;
 }
 
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+}
+
+@media screen and (max-width: 1064px){
+    .container{
+        margin-inline: auto;
+    }
+}
+
+
+
+
 .grid{
     display: none;
     gap: 1.5rem;
@@ -152,11 +167,29 @@ img{
     justify-content: space-between;
     align-items: center;
 }
+@media screen and (max-width: 768px){
+    .nav{
+        column-gap: 3rem;
+    }
+}
+@media screen and (max-width: 1024px){
+ .nav{
+     height: calc(var(--header-height) + 1.5rem);
+ }   
+}
 
 .nav__toggle,
 .nav__close{
     display: flex;
     color: var(--title-color);
+}
+
+@media screen and (max-width: 768px){
+    .nav__toggle,
+    .nav__close{
+        display: none;
+        
+    }  
 }
 
 .nav__logo{
@@ -178,7 +211,7 @@ img{
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767 px){
     .nav__menu{
         position: fixed;
         top: -100%;
@@ -190,11 +223,23 @@ img{
         transition: top 0.4s;
     }
 }
+
+@media screen and (max-width: 768px){
+    .nav__menu{
+        margin-left: auto;
+    }
+}
 .nav__list{
     display: flex;
     flex-direction: column;
     text-align: center;
     grid-row-gap: 2rem;
+}
+@media screen and (max-width: 768px){
+    .nav__list{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
 }
 
 .nav__link{
@@ -219,6 +264,12 @@ img{
     width: 100px;
     top: -2rem;
     left: -2rem;
+}
+
+@media screen and (max-width: 768px){
+    .nav__img-1{
+        display: none;
+    }
 }
 /* //SHOW MENU/// */
 .show-menu{

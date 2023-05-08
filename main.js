@@ -22,7 +22,9 @@ if(navClose) {
     })
 }
 ////////////REMOVE MENU MOBILE//////////////
-
+navLink.forEach(link => link.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu')
+}))
 
 
 
