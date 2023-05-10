@@ -4,13 +4,14 @@
 font-family: 'Poppins', sans-serif;
 font-family: 'Titan One', cursive; */
 /* /////////////////VARIABLE CSS///////////// */
+
 :root{
     --header-height: 3.5rem;
     
     /* /=============colors==============/ */
     /* /=====color mode hsl(hue, saturation, lightness)== */
     --primary-color: hsl(356, 100%, 35%);
-    --primary-color-alt: hsl(356, 100%, 35%);
+    --primary-color-alt: hsl(356, 100%, 25%);
     --title-color: hsl(19, 16%, 15%);
     --text-color: hsl(19, 16%, 35%);
     --text-color-color: hsl(19, 8%, 55%);
@@ -26,6 +27,12 @@ font-family: 'Titan One', cursive; */
      /* //======font weight==////// */
     --font-medium: 500;
     --font-semi-bold: 600;
+    --font-2xl: 5rem;
+    --font-xl: 3rem;
+    --font-lg: 1.5rem;
+    --font-md: 1.25rem;
+    --font-sm: 1rem;
+    --font-xm: 0.875rem;
 }
 
 @media screen and (min-width: 1024px){
@@ -48,6 +55,9 @@ font-family: 'Titan One', cursive; */
 
 html{
     scroll-behavior: smooth;
+}
+body{
+    font-family: var(--body-font);
     font-size: var(--font-sm);
     background-color: var(--body-color);
     color: var(--text-color);
@@ -103,24 +113,29 @@ img{
     }
 }
 
-@media screen and (max-width: 1064px){
+@media screen and (min-width: 1064px){
     .container{
         margin-inline: auto;
     }
 }
 
 
-
-
 .grid{
-    display: none;
+    display: grid;
     gap: 1.5rem;
 }
 
 .section{
     padding-block: 5rem 1rem;
 }
-.section__title{
+
+@media screen and (max-width: 340px){
+    
+}
+.section__title,
+.home__title
+
+{
     font-family: var(--title-font);
     font-size: var(--font-xl);
     font-weight:bold;
@@ -167,7 +182,7 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     .nav{
         column-gap: 3rem;
     }
@@ -184,7 +199,7 @@ img{
     color: var(--title-color);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     .nav__toggle,
     .nav__close{
         display: none;
@@ -203,15 +218,15 @@ img{
     transition: color .3s;
 }
 .nav__logo img{
-    width: 25px;
+    width: 45px;
 }
 
 .nav__toggle{
-    font-size: 1.25;
+    font-size: 1.25rem;
     cursor: pointer;
-}
+} 
 
-@media screen and (max-width: 767 px){
+@media screen and (max-width: 767px){
     .nav__menu{
         position: fixed;
         top: -100%;
@@ -229,13 +244,13 @@ img{
         margin-left: auto;
     }
 }
-.nav__list{
+.nav__list{ 
     display: flex;
     flex-direction: column;
     text-align: center;
-    grid-row-gap: 2rem;
+    row-gap: 2rem;
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     .nav__list{
         flex-direction: row;
         column-gap: 3rem;
@@ -266,7 +281,7 @@ img{
     left: -2rem;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     .nav__img-1{
         display: none;
     }
@@ -282,12 +297,84 @@ img{
 
 
 /* /////////////HOME///////////////// */
+.home{
+    position: relative;
+}
+.home__container{
+    row-gap: 3rem;
+    justify-self: center;
+}
+.home__img{
+    width: 300px;
+    justify-items: center !important;
+}
+.home__data{
+    text-align: center;
+}
+.home__title{
+    font-size: var(--font-2xl);
+    margin-bottom: 1rem;
+}
+.home__description{
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+}
+/* //////////////common @media/////////// */
+@media screen and (min-width: 576px){
+    .home__container{
+        grid-template-columns: 0.7fr;
+        justify-content: center;
+    }
+}
+/* /////////////BUTTON///////////////// */
+.button{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background-color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    border-radius: 4rem;
+    color: #fff;
+    font-weight: var(--font-medium);
+    transition: background 0.3s;
+}
 
+.button i {
+    font-size: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.button:hover{
+    background-color: var(--primary-color-alt);
+}
+.button:hover i{
+    transform: translateX(0.25rem);
+}
+/* ////////////////////////////// */
+
+
+/* ////////////////////////////// */
+
+/* ////////////////////////////// */
 
 /* ////////////////////////////// */
 
 
 /* ////////////////////////////// */
+
+/* ////////////////////////////// */
+
+/* ////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
 
 
 
