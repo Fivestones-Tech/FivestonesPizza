@@ -332,7 +332,8 @@ img{
 @media screen and (min-width: 576px){
     .home__container,
     .about__container,
-    .recently__container
+    .recently__container,
+    .newsletter__container
     {
        grid-template-columns: 0.7fr;
        justify-content: center;
@@ -626,7 +627,9 @@ img{
     }
 }
 @media screen and (min-width: 1024px){
-    
+    .newsletter__form{
+        padding: 8px 8px 8px 24px;
+    }
 }
 .newsletter__input,
 .newsletter__button{
@@ -634,6 +637,13 @@ img{
     border: none;
     outline: none;
 }
+
+@media screen and (min-width: 1024px){
+    .newsletter__button{
+        font-size: var(--font-sm);
+    }
+}
+
 .newsletter__input{
     width: 90%;
     color: var(--text-color);
