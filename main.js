@@ -33,6 +33,15 @@ navLink.forEach(link => link.addEventListener('click', () => {
 
 
 ///////////CHANGE BACKGROUND HEADER/////////////////
+const scrollHeader = () => {
+    const header = document.getElementById("header");
+    
+    this.scrollY >= 50
+     ? header.classList.add("bg-header")
+    : header.classList.remove("bg-header");
+};
+
+window.addEventListener('scroll', scrollHeader);
 
 //////////////////SCROLL SECTIONS ACTIVE LINK/////////
 
@@ -41,14 +50,22 @@ const scrollUp = () => {
     const scrollUp = document.getElementById("scroll-up");
     
     this.scrollY >= 350
-    ? scrollUp.classList.add("show-scroll")
+     ? scrollUp.classList.add("show-scroll")
     : scrollUp.classList.remove("show-scroll");
 };
 
-window.addEventListener("scroll", scrollUp);
+window.addEventListener('scroll', scrollUp);
 
 
 ///////////////DARK LIGHT THEME///////////////
+const themebutton = document.getElementById('theme-button');
+
+themebutton.addEventListener('click', (e) => {
+    document.body.classList.add('dark-theme');
+    themebutton.classList.replace('fa-moon', 'fa-sun');
+    localStorage.setItem('mode', 'dark');
+}
+
 
 ////////////////////SCROLL REVEAL ANIMATION/////////////////////
 
